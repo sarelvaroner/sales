@@ -1,17 +1,14 @@
 
-{{ config(materialized='table') }}
+{{ config(materialized='table', unique_key='id') }}
 
-with account as (
-
-select ID as id,
-       INDUSTRY as industry,
-       SALES_SEGMENT as sales_segment
-from {{ ref('seed__account') }}
+WITH account AS (
+    SELECT DISTINCT
+        ID AS id,
+        INDUSTRY AS industry,
+        SALES_SEGMENT AS sales_segment
+    FROM {{ ref('seed__account') }}
 )
-
-
-select *
-from account
+SELECT * FROM account
 
 
 

@@ -1,21 +1,16 @@
 
-{{ config(materialized='table') }}
+{{ config(materialized='table', unique_key='id') }}
 
-
-
-with opportunity as (
-
-select
-    ID as id,
-    ACCOUNTID as account_id,
-    START_DATE as start_date,
-    END_DATE as end_date
-from {{ ref('seed__opportunity') }}
+WITH opportunity AS (
+    SELECT DISTINCT
+        ID AS id,
+        ACCOUNTID AS account_id,
+        START_DATE AS start_date,
+        END_DATE AS end_date
+    FROM {{ ref('seed__opportunity') }}
 )
 
-
-select *
-from opportunity
+SELECT * FROM opportunity
 
 
 

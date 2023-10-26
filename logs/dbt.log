@@ -53,3 +53,31 @@ Runtime Error
 [0m12:59:33.879689 [debug] [MainThread]: Command `dbt seed` failed at 12:59:33.879530 after 0.03 seconds
 [0m12:59:33.880136 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1047d3a00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107658580>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10769ff70>]}
 [0m12:59:33.880583 [debug] [MainThread]: Flushing usage events
+[0m01:38:14.061076 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b739d60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d5defd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d5f6850>]}
+
+
+============================== 01:38:14.064995 | ca036d41-7f37-4d0d-811b-c42a51ae4a02 ==============================
+[0m01:38:14.064995 [info ] [MainThread]: Running with dbt=1.6.6
+[0m01:38:14.065605 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/sarel/.dbt', 'debug': 'False', 'version_check': 'True', 'log_path': 'logs', 'warn_error': 'None', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt show --select opportunity_with_itemes.sql', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m01:38:14.066234 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /Users/sarel/PycharmProjects/sales_docker/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m01:38:14.067022 [debug] [MainThread]: Command `dbt show` failed at 01:38:14.066864 after 0.03 seconds
+[0m01:38:14.067577 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b739d60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d5de910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d5de760>]}
+[0m01:38:14.068004 [debug] [MainThread]: Flushing usage events
+[0m05:09:42.886429 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10eba5fa0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dcb6550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111bee880>]}
+
+
+============================== 05:09:42.890303 | 0f7aea8a-b881-43e2-996d-3f80b8c323a5 ==============================
+[0m05:09:42.890303 [info ] [MainThread]: Running with dbt=1.6.6
+[0m05:09:42.890921 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/sarel/.dbt', 'debug': 'False', 'version_check': 'True', 'log_path': 'logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt docs generate', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m05:09:42.891527 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /Users/sarel/PycharmProjects/sales_docker/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m05:09:42.892353 [debug] [MainThread]: Command `dbt docs generate` failed at 05:09:42.892193 after 0.03 seconds
+[0m05:09:42.892915 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10eba5fa0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111bd53a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111bd5580>]}
+[0m05:09:42.893353 [debug] [MainThread]: Flushing usage events

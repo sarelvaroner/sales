@@ -1,23 +1,20 @@
 
-{{ config(materialized='table') }}
+{{ config(materialized='table', unique_key='id') }}
 
+WITH opportunity_line_item AS (
 
-
-with opportunity_line_item as (
-
-select
-    ID as id,
-    OPPORTUNITYID as opportunity_id,
-    UNITPRICE as unit_price,
-    QUANTITY as quantity,
-    TOTALPRICE as total_price,
-    PRODUCT as product
-from {{ ref('seed__opportunity_line_item') }}
+    SELECT DISTINCT
+        ID AS id,
+        OPPORTUNITYID AS opportunity_id,
+        UNITPRICE AS unit_price,
+        QUANTITY AS quantity,
+        TOTALPRICE AS total_price,
+        PRODUCT AS product
+    FROM {{ ref('seed__opportunity_line_item') }}
 )
 
 
-select *
-from opportunity_line_item
+SELECT * FROM opportunity_line_item
 
 
 
