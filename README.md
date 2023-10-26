@@ -27,7 +27,7 @@ I could solve by the configuration file of dbt to add constraint and fk.
 Mabey for the duplications as well, currently added distinct for the queries.
 
 
-
+![img.png](img.png)
 
 
 
